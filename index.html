@@ -22,13 +22,26 @@
     <div id="container">
       <div id="loginForm">
         <form method="get" id="login" action="./script.js"></form>
-        <span>Welcome</span>
         <div id="attendence">
+          <p>Welcome</p>
           <ion-icon name="checkmark-done-circle-sharp"></ion-icon>
         </div>
-        <input type="text" placeholder="Nome" class="name" required="" />
-        <input type="password" placeholder="senha" class="senha" required="" />
-        <input type="submit" name="submit" class="submit" />
+        <div class="input-data">
+          <input type="text" class="name" required="" />
+          <div class="line"></div>
+          <label>Name</label>
+        </div>
+        <div class="input-data">
+          <input type="password" class="password" required="" />
+          <label>Password</label>
+        </div>
+        <div class="submit">
+          <input type="submit" name="submit" id="submit" />
+          <a href="youtube.com"></a>
+        </div>
+        <footer>
+          <a href="#">Don't You have an account?</a>
+        </footer>
       </div>
     </div>
   </body>

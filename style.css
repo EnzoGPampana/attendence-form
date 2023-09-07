@@ -2,71 +2,117 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+  outline: none;
 }
 :root {
   --text-color: black
   --text-color-doc: black;
-  --stroke-color: rgba(255, 255, 255, 0.5);
   --div-cnt-back: #F7F9F9;
-}
-body {
-  background: rgb(52, 154, 213);
-  background: linear-gradient(
+  --background:rgb(52, 154, 213);
+  --background-gradient: linear-gradient(
     90deg,
     rgba(52, 154, 213, 1) 34%,
     rgba(0, 212, 255, 1) 100%
   );
-  height: 100%;
+  --middle-color: #015065
 }
-body * {
-  font-family: "Inter", sans-serif;
-  font-family: "Roboto Slab", serif;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-gradient);
+  height: 100vh;
   color: var(--text-color);
 }
 #container {
   width: 100%;
   max-width: 588px;
-  margin: 56px auto;
   padding: 0 24px;
+  margin: 250px auto;
+
 }
-span{
-  font-weight: bold;
-  font-size: 32px;
-  padding: 0px 0px 12px;
+#loginForm{
+  width: 100%;
+  max-width: 588px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--div-cnt-back);
+  box-shadow:  0 0 10px rgba(4, 3, 5, 0.329);
+  padding: 50px 20px;
 }
 #attendence{
+  font-weight: bold;
+  padding: 0px 0px 12px;
+  text-align: center;
   font-size: 56px;
+  color: var(--middle-color);
+  margin-bottom: 15px;
 }
-#loginForm {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-
-  margin: 50% auto;
+#loginForm .input-data{
   width: 100%;
-  padding: 50px 20px;
+  height: 50px;
+  position: relative;
+  margin-bottom: 27px;
+  color: var(--middle-color);
+}
+#loginForm .input-data input{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  font-size: 25px;
+  border-bottom: 2px solid var(--middle-color);
+  background: none;
+  padding: 0px 16px;
 
-  background: var(--div-cnt-back);
-  border-radius: 10px;
-  
+  transition: 0.2s;
 
 }
-.submit {
-  width: 95px;
-  text-align: center;
+#loginForm .input-data label{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  transition: 0.3s;
+  font-size: 20px;
+  color: var(--middle-color);
 }
-
-input {
+#loginForm .input-data input:focus,
+#loginForm .input-data input:valid{
+  border-bottom: 4px solid var(--background);
+}
+#loginForm .input-data input:focus ~ label,
+#loginForm .input-data input:valid ~ label{
+  color: var(--background);
+  transform: translateY(-35px);
+  font-size: 15px;
+}
+#loginForm .submit{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 16px 24px;
-  gap: 16px;
-
-  margin: 10px auto;
-  width: 360px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  color: var(--text-color-doc);
+}
+#loginForm .submit input:hover{
+  background: var(--background-gradient);
+}
+#loginForm .submit input{
+  margin: auto;
+  width: 95px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  background: var(--middle-color);
+  color: white;
+  height: 40px;
+  border-radius: 40px;
+  margin-bottom: 15px;
+ 
+}
+#loginForm footer{
+  text-align: center;
+  margin-top: 10px;
+}
+#loginForm footer a{
+    text-decoration: none;
 }
