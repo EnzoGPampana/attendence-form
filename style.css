@@ -68,8 +68,9 @@ body {
   border-bottom: 2px solid var(--middle-color);
   background: none;
   padding: 0px 16px;
+  color: var(--background);
 
-  transition: 0.2s;
+  transition: all 0.2s;
 
 }
 #loginForm .input-data label{
@@ -91,12 +92,13 @@ body {
   font-size: 15px;
 }
 #loginForm .submit{
-  display: flex;
+  transition: all 0.5s;
 }
-#loginForm .submit input:hover{
+#loginForm .submit:hover{
+  transform: translateY(-8px);
   background: var(--background-gradient);
 }
-#loginForm .submit input{
+#loginForm .submit{
   margin: auto;
   width: 95px;
   font-size: 20px;
